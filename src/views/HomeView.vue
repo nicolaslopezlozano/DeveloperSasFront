@@ -76,7 +76,7 @@
 const axios = require('axios');
 import router from '@/router';
 export default {
-    name: 'Diary',
+    name: 'HomeView',
     data() {
         return {
             users: [],
@@ -122,7 +122,6 @@ export default {
           axios
             .get('http://127.0.0.1:8000/api/email-empleados/'+this.buscar_campo)
             .then(response => {
-                this.users = null;
                 this.users = response.data;
             });
         }
